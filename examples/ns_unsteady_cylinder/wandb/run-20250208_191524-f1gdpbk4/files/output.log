@@ -1,0 +1,23 @@
+I0208 19:15:25.440590 140175579939904 train.py:232] Training time window 1
+Waiting for JIT...
+Traceback (most recent call last):
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/ns_unsteady_cylinder/main.py", line 42, in <module>
+    app.run(main)
+    ~~~~~~~^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ~~~~^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/ns_unsteady_cylinder/main.py", line 34, in main
+    train.train_and_evaluate(FLAGS.config, FLAGS.workdir)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/ns_unsteady_cylinder/train.py", line 288, in train_and_evaluate
+    model = train_one_window(config, workdir, model, samplers, idx)
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/ns_unsteady_cylinder/train.py", line 131, in train_one_window
+    model.state = model.update_weights(model.state, batch)
+                  ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+jaxlib.xla_extension.XlaRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 48953818256 bytes.
+--------------------
+For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.

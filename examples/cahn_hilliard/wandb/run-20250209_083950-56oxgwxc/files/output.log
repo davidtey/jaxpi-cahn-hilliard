@@ -1,0 +1,28 @@
+Training time window 1
+Waiting for JIT...
+Device: gpu
+[08:40:37 - main - INFO] ---------------------------
+[08:40:37 - main - INFO] Iter:   0    Time: 44.098
+[08:40:37 - main - INFO] -----------  --------------
+[08:40:37 - main - INFO] ics_loss     1.259e+01
+[08:40:37 - main - INFO] res_loss     6.765e+01
+[08:40:37 - main - INFO] l2_error     3.576e+00
+Traceback (most recent call last):
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 43, in <module>
+    app.run(main)
+    ~~~~~~~^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ~~~~^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 35, in main
+    train.train_and_evaluate(FLAGS.config, FLAGS.workdir)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 115, in train_and_evaluate
+    model = train_one_window(config, workdir, model, samplers, u, idx)
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 60, in train_one_window
+    if log_dict['ics'] < config.training.ics_error_break and log_dict['res'] < config.training.res_error_break:
+       ~~~~~~~~^^^^^^^
+KeyError: 'ics'

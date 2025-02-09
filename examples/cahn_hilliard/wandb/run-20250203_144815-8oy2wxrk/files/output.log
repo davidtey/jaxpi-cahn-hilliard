@@ -1,0 +1,64 @@
+Training time window 1
+Waiting for JIT...
+Device: cpu
+Traceback (most recent call last):
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 41, in <module>
+    app.run(main)
+    ~~~~~~~^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ~~~~^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 33, in main
+    train.train_and_evaluate(FLAGS.config, FLAGS.workdir)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 98, in train_and_evaluate
+    model = train_one_window(config, workdir, model, res_sampler, u, idx)
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 34, in train_one_window
+    model.state = model.step(model.state, batch)
+                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/traceback_util.py", line 180, in reraise_with_filtered_traceback
+    return fun(*args, **kwargs)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/api.py", line 1558, in cache_miss
+    execute = pxla.xla_pmap_impl_lazy(p.flat_fun, *p.flat_args, **params)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/interpreters/pxla.py", line 353, in xla_pmap_impl_lazy
+    compiled_fun, fingerprint = parallel_callable(
+                                ~~~~~~~~~~~~~~~~~^
+        fun, backend, axis_name, axis_size, global_axis_size, devices, name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        in_axes, out_axes_thunk, donated_invars,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        is_explicit_global_axis_size, *abstract_args)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/linear_util.py", line 349, in memoized_fun
+    ans = call(fun, *args)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/interpreters/pxla.py", line 639, in parallel_callable
+    pmap_executable = pmap_computation.compile()
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/profiler.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/interpreters/pxla.py", line 942, in compile
+    executable = UnloadedPmapExecutable.from_hlo(
+        self._hlo, **self.compile_args,
+        compiler_options=compiler_options)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/interpreters/pxla.py", line 1101, in from_hlo
+    compiled = compiler.compile_or_get_cached(
+        pci.backend, hlo, device_assignment, compile_options,
+        host_callbacks)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/compiler.py", line 464, in compile_or_get_cached
+    return _compile_and_write_cache(
+        backend,
+    ...<4 lines>...
+        cache_key,
+    )
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/compiler.py", line 665, in _compile_and_write_cache
+    executable = backend_compile(
+        backend, computation, compile_options, host_callbacks
+    )
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/profiler.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/compiler.py", line 315, in backend_compile
+    return backend.compile(built_c, compile_options=options)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,15 @@
+{"time":"2025-02-08T19:30:27.113937632+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.5","symlink path":"/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/wandb/run-20250208_193026-ib6j5tcv/logs/debug-core.log"}
+{"time":"2025-02-08T19:30:27.301943312+08:00","level":"INFO","msg":"created new stream","id":"ib6j5tcv"}
+{"time":"2025-02-08T19:30:27.302001119+08:00","level":"INFO","msg":"stream: started","id":"ib6j5tcv"}
+{"time":"2025-02-08T19:30:27.302116821+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"ib6j5tcv"}
+{"time":"2025-02-08T19:30:27.302152195+08:00","level":"INFO","msg":"sender: started","stream_id":"ib6j5tcv"}
+{"time":"2025-02-08T19:30:27.302200269+08:00","level":"INFO","msg":"handler: started","stream_id":"ib6j5tcv"}
+{"time":"2025-02-08T19:30:27.639983872+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-08T19:30:59.834353987+08:00","level":"INFO","msg":"stream: closing","id":"ib6j5tcv"}
+{"time":"2025-02-08T19:30:59.834382776+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-08T19:30:59.834989522+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-08T19:31:01.36641943+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-08T19:31:01.700268796+08:00","level":"INFO","msg":"handler: closed","stream_id":"ib6j5tcv"}
+{"time":"2025-02-08T19:31:01.700309458+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ib6j5tcv"}
+{"time":"2025-02-08T19:31:01.700334852+08:00","level":"INFO","msg":"sender: closed","stream_id":"ib6j5tcv"}
+{"time":"2025-02-08T19:31:01.700352844+08:00","level":"INFO","msg":"stream: closed","id":"ib6j5tcv"}

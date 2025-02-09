@@ -1,0 +1,164 @@
+Training time window 1
+Waiting for JIT...
+Device: gpu
+[20:01:43 - main - INFO] ---------------------------
+[20:01:43 - main - INFO] Iter:   0    Time: 75.337
+[20:01:43 - main - INFO] -----------  --------------
+[20:01:43 - main - INFO] bc_loss      5.151e-03
+[20:01:43 - main - INFO] ics_loss     3.589e+01
+[20:01:43 - main - INFO] res_loss     1.555e-01
+[20:01:43 - main - INFO] l2_error     7.563e+00
+[20:02:11 - main - INFO] ---------------------------
+[20:02:11 - main - INFO] Iter: 100    Time: 28.862
+[20:02:11 - main - INFO] -----------  --------------
+[20:02:11 - main - INFO] bc_loss      1.417e-06
+[20:02:11 - main - INFO] ics_loss     4.122e-01
+[20:02:11 - main - INFO] res_loss     1.493e-05
+[20:02:11 - main - INFO] l2_error     1.006e+00
+[20:02:18 - main - INFO] --------------------------
+[20:02:18 - main - INFO] Iter: 200    Time: 6.216
+[20:02:18 - main - INFO] -----------  -------------
+[20:02:18 - main - INFO] bc_loss      1.525e-06
+[20:02:18 - main - INFO] ics_loss     4.119e-01
+[20:02:18 - main - INFO] res_loss     1.053e-05
+[20:02:18 - main - INFO] l2_error     1.008e+00
+[20:02:24 - main - INFO] --------------------------
+[20:02:24 - main - INFO] Iter: 300    Time: 6.234
+[20:02:24 - main - INFO] -----------  -------------
+[20:02:24 - main - INFO] bc_loss      1.710e-06
+[20:02:24 - main - INFO] ics_loss     4.118e-01
+[20:02:24 - main - INFO] res_loss     1.120e-05
+[20:02:24 - main - INFO] l2_error     1.010e+00
+[20:02:30 - main - INFO] --------------------------
+[20:02:30 - main - INFO] Iter: 400    Time: 6.258
+[20:02:30 - main - INFO] -----------  -------------
+[20:02:30 - main - INFO] bc_loss      1.512e-06
+[20:02:30 - main - INFO] ics_loss     4.116e-01
+[20:02:30 - main - INFO] res_loss     1.259e-05
+[20:02:30 - main - INFO] l2_error     1.011e+00
+[20:02:36 - main - INFO] --------------------------
+[20:02:36 - main - INFO] Iter: 500    Time: 6.249
+[20:02:36 - main - INFO] -----------  -------------
+[20:02:36 - main - INFO] bc_loss      1.579e-06
+[20:02:36 - main - INFO] ics_loss     4.114e-01
+[20:02:36 - main - INFO] res_loss     1.643e-05
+[20:02:36 - main - INFO] l2_error     1.014e+00
+[20:02:43 - main - INFO] --------------------------
+[20:02:43 - main - INFO] Iter: 600    Time: 6.237
+[20:02:43 - main - INFO] -----------  -------------
+[20:02:43 - main - INFO] bc_loss      5.773e-06
+[20:02:43 - main - INFO] ics_loss     4.101e-01
+[20:02:43 - main - INFO] res_loss     3.935e-05
+[20:02:43 - main - INFO] l2_error     1.018e+00
+[20:02:49 - main - INFO] --------------------------
+[20:02:49 - main - INFO] Iter: 700    Time: 6.248
+[20:02:49 - main - INFO] -----------  -------------
+[20:02:49 - main - INFO] bc_loss      2.899e-06
+[20:02:49 - main - INFO] ics_loss     4.087e-01
+[20:02:49 - main - INFO] res_loss     7.146e-05
+[20:02:49 - main - INFO] l2_error     1.015e+00
+[20:02:55 - main - INFO] --------------------------
+[20:02:55 - main - INFO] Iter: 800    Time: 6.225
+[20:02:55 - main - INFO] -----------  -------------
+[20:02:55 - main - INFO] bc_loss      2.175e-06
+[20:02:55 - main - INFO] ics_loss     4.100e-01
+[20:02:55 - main - INFO] res_loss     4.516e-05
+[20:02:55 - main - INFO] l2_error     1.016e+00
+[20:03:01 - main - INFO] --------------------------
+[20:03:01 - main - INFO] Iter: 900    Time: 6.205
+[20:03:01 - main - INFO] -----------  -------------
+[20:03:01 - main - INFO] bc_loss      1.985e-06
+[20:03:01 - main - INFO] ics_loss     4.065e-01
+[20:03:01 - main - INFO] res_loss     2.302e-04
+[20:03:01 - main - INFO] l2_error     1.013e+00
+Traceback (most recent call last):
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/interpreters/pxla.py", line 1101, in from_hlo
+    compiled = compiler.compile_or_get_cached(
+        pci.backend, hlo, device_assignment, compile_options,
+        host_callbacks)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/compiler.py", line 464, in compile_or_get_cached
+    return _compile_and_write_cache(
+        backend,
+    ...<4 lines>...
+        cache_key,
+    )
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/compiler.py", line 665, in _compile_and_write_cache
+    executable = backend_compile(
+        backend, computation, compile_options, host_callbacks
+    )
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/profiler.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/compiler.py", line 321, in backend_compile
+    raise e
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/compiler.py", line 315, in backend_compile
+    return backend.compile(built_c, compile_options=options)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jaxlib.xla_extension.XlaRuntimeError: INTERNAL: ptxas exited with non-zero error code 2, output: ptxas warning : Registers are spilled to local memory in function 'loop_add_fusion_1', 64 bytes spill stores, 64 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_7', 532 bytes spill stores, 540 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'loop_add_multiply_fusion', 2196 bytes spill stores, 2196 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'loop_add_fusion_2', 2060 bytes spill stores, 2072 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_multiply_reduce_fusion_2', 404 bytes spill stores, 388 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_multiply_transpose_fusion', 312 bytes spill stores, 564 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_multiply_reduce_slice_fusion', 268 bytes spill stores, 268 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_multiply_transpose_fusion_5', 304 bytes spill stores, 556 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_transpose_fusion_18', 4 bytes spill stores, 4 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_multiply_transpose_fusion_7', 24 bytes spill stores, 48 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'loop_add_multiply_fusion_9', 360 bytes spill stores, 360 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'loop_add_fusion_4', 2252 bytes spill stores, 2256 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'loop_add_multiply_slice_fusion_3', 132 bytes spill stores, 132 bytes spill loads
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 43, in <module>
+    app.run(main)
+    ~~~~~~~^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ~~~~^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 35, in main
+    train.train_and_evaluate(FLAGS.config, FLAGS.workdir)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 109, in train_and_evaluate
+    model = train_one_window(config, workdir, model, samplers, u, idx)
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 43, in train_one_window
+    model.state = model.update_weights(model.state, batch)
+                  ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/traceback_util.py", line 180, in reraise_with_filtered_traceback
+    return fun(*args, **kwargs)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/api.py", line 1558, in cache_miss
+    execute = pxla.xla_pmap_impl_lazy(p.flat_fun, *p.flat_args, **params)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/interpreters/pxla.py", line 353, in xla_pmap_impl_lazy
+    compiled_fun, fingerprint = parallel_callable(
+                                ~~~~~~~~~~~~~~~~~^
+        fun, backend, axis_name, axis_size, global_axis_size, devices, name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        in_axes, out_axes_thunk, donated_invars,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        is_explicit_global_axis_size, *abstract_args)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/linear_util.py", line 349, in memoized_fun
+    ans = call(fun, *args)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/interpreters/pxla.py", line 639, in parallel_callable
+    pmap_executable = pmap_computation.compile()
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/profiler.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/interpreters/pxla.py", line 942, in compile
+    executable = UnloadedPmapExecutable.from_hlo(
+        self._hlo, **self.compile_args,
+        compiler_options=compiler_options)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/interpreters/pxla.py", line 1098, in from_hlo
+    with dispatch.log_elapsed_time(
+         ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        "Finished XLA compilation of {fun_name} in {elapsed_time:.9f} sec",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        fun_name=pci.name, event=dispatch.BACKEND_COMPILE_EVENT):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/contextlib.py", line 145, in __exit__
+    def __exit__(self, typ, value, traceback):
+
+KeyboardInterrupt

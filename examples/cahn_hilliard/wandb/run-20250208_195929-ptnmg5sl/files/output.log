@@ -1,0 +1,35 @@
+Training time window 1
+Waiting for JIT...
+Device: gpu
+Traceback (most recent call last):
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 43, in <module>
+    app.run(main)
+    ~~~~~~~^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ~~~~^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 35, in main
+    train.train_and_evaluate(FLAGS.config, FLAGS.workdir)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 109, in train_and_evaluate
+    model = train_one_window(config, workdir, model, samplers, u, idx)
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 38, in train_one_window
+    model.state = model.step(model.state, batch)
+                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jaxpi/models.py", line 170, in step
+    grads = grad(self.loss)(state.params, state.weights, batch, *args)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jaxpi/models.py", line 123, in loss
+    losses = self.losses(params, batch, *args)
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/models.py", line 82, in losses
+    bc_pred = vmap(self.bc_net, (None, 0, 0))(params, bc_batch[:, 0], bc_batch[:, 1])
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/models.py", line 56, in bc_net
+    _, bc = self.r_net(params, t, x)
+            ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/models.py", line 40, in r_net
+    u_x = grad(u_fn)(params, t, x)  # First derivative
+TypeError: CH.r_net.<locals>.<lambda>() takes 1 positional argument but 3 were given
+--------------------
+For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.

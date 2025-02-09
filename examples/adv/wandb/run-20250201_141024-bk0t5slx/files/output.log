@@ -1,0 +1,467 @@
+Waiting for JIT...
+I0201 14:10:29.152584 140352932452160 utils.py:148] Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+I0201 14:10:29.152848 140352932452160 utils.py:160] NumExpr defaulting to 8 threads.
+[14:10:29 - main - INFO] --------------------------
+[14:10:29 - main - INFO] Iter:   0    Time: 2.807
+[14:10:29 - main - INFO] -----------  -------------
+[14:10:29 - main - INFO] ics_loss     6.547e+00
+[14:10:29 - main - INFO] res_loss     2.601e+03
+[14:10:29 - main - INFO] l2_error     2.173e+00
+[14:10:37 - main - INFO] --------------------------
+[14:10:37 - main - INFO] Iter: 100    Time: 7.996
+[14:10:37 - main - INFO] -----------  -------------
+[14:10:37 - main - INFO] ics_loss     3.492e-01
+[14:10:37 - main - INFO] res_loss     1.045e+00
+[14:10:37 - main - INFO] l2_error     1.183e+00
+[14:10:45 - main - INFO] --------------------------
+[14:10:45 - main - INFO] Iter: 200    Time: 7.659
+[14:10:45 - main - INFO] -----------  -------------
+[14:10:45 - main - INFO] ics_loss     2.161e-01
+[14:10:45 - main - INFO] res_loss     2.004e+00
+[14:10:45 - main - INFO] l2_error     1.452e+00
+[14:10:52 - main - INFO] --------------------------
+[14:10:52 - main - INFO] Iter: 300    Time: 7.526
+[14:10:52 - main - INFO] -----------  -------------
+[14:10:52 - main - INFO] ics_loss     1.589e-01
+[14:10:52 - main - INFO] res_loss     3.168e+00
+[14:10:52 - main - INFO] l2_error     1.651e+00
+[14:11:00 - main - INFO] --------------------------
+[14:11:00 - main - INFO] Iter: 400    Time: 8.003
+[14:11:00 - main - INFO] -----------  -------------
+[14:11:00 - main - INFO] ics_loss     1.383e-01
+[14:11:00 - main - INFO] res_loss     2.719e+00
+[14:11:00 - main - INFO] l2_error     1.838e+00
+[14:11:08 - main - INFO] --------------------------
+[14:11:08 - main - INFO] Iter: 500    Time: 8.020
+[14:11:08 - main - INFO] -----------  -------------
+[14:11:08 - main - INFO] ics_loss     1.072e-01
+[14:11:08 - main - INFO] res_loss     3.016e+00
+[14:11:08 - main - INFO] l2_error     2.088e+00
+[14:11:17 - main - INFO] --------------------------
+[14:11:17 - main - INFO] Iter: 600    Time: 8.588
+[14:11:17 - main - INFO] -----------  -------------
+[14:11:17 - main - INFO] ics_loss     6.206e-02
+[14:11:17 - main - INFO] res_loss     1.879e+00
+[14:11:17 - main - INFO] l2_error     1.943e+00
+[14:11:25 - main - INFO] --------------------------
+[14:11:25 - main - INFO] Iter: 700    Time: 8.480
+[14:11:25 - main - INFO] -----------  -------------
+[14:11:25 - main - INFO] ics_loss     9.346e-03
+[14:11:25 - main - INFO] res_loss     5.193e-01
+[14:11:25 - main - INFO] l2_error     2.013e+00
+[14:11:33 - main - INFO] --------------------------
+[14:11:33 - main - INFO] Iter: 800    Time: 8.036
+[14:11:33 - main - INFO] -----------  -------------
+[14:11:33 - main - INFO] ics_loss     5.889e-03
+[14:11:33 - main - INFO] res_loss     6.868e-01
+[14:11:33 - main - INFO] l2_error     2.018e+00
+[14:11:41 - main - INFO] --------------------------
+[14:11:41 - main - INFO] Iter: 900    Time: 7.673
+[14:11:41 - main - INFO] -----------  -------------
+[14:11:41 - main - INFO] ics_loss     2.506e-03
+[14:11:41 - main - INFO] res_loss     2.464e-01
+[14:11:41 - main - INFO] l2_error     1.965e+00
+[14:11:49 - main - INFO] ---------------------------
+[14:11:49 - main - INFO] Iter: 1000    Time: 8.305
+[14:11:49 - main - INFO] ------------  -------------
+[14:11:49 - main - INFO] ics_loss      1.005e-02
+[14:11:49 - main - INFO] res_loss      5.580e-01
+[14:11:49 - main - INFO] l2_error      1.876e+00
+[14:11:57 - main - INFO] ---------------------------
+[14:11:57 - main - INFO] Iter: 1100    Time: 7.709
+[14:11:57 - main - INFO] ------------  -------------
+[14:11:57 - main - INFO] ics_loss      1.965e-03
+[14:11:57 - main - INFO] res_loss      1.963e-01
+[14:11:57 - main - INFO] l2_error      1.865e+00
+[14:12:05 - main - INFO] ---------------------------
+[14:12:05 - main - INFO] Iter: 1200    Time: 7.768
+[14:12:05 - main - INFO] ------------  -------------
+[14:12:05 - main - INFO] ics_loss      3.496e-03
+[14:12:05 - main - INFO] res_loss      2.154e-01
+[14:12:05 - main - INFO] l2_error      1.873e+00
+[14:12:12 - main - INFO] ---------------------------
+[14:12:12 - main - INFO] Iter: 1300    Time: 7.571
+[14:12:12 - main - INFO] ------------  -------------
+[14:12:12 - main - INFO] ics_loss      3.718e-03
+[14:12:12 - main - INFO] res_loss      1.732e-01
+[14:12:12 - main - INFO] l2_error      1.851e+00
+[14:12:20 - main - INFO] ---------------------------
+[14:12:20 - main - INFO] Iter: 1400    Time: 7.744
+[14:12:20 - main - INFO] ------------  -------------
+[14:12:20 - main - INFO] ics_loss      2.348e-03
+[14:12:20 - main - INFO] res_loss      1.994e-01
+[14:12:20 - main - INFO] l2_error      1.863e+00
+[14:12:28 - main - INFO] ---------------------------
+[14:12:28 - main - INFO] Iter: 1500    Time: 7.648
+[14:12:28 - main - INFO] ------------  -------------
+[14:12:28 - main - INFO] ics_loss      3.332e-03
+[14:12:28 - main - INFO] res_loss      1.948e-01
+[14:12:28 - main - INFO] l2_error      1.810e+00
+[14:12:35 - main - INFO] ---------------------------
+[14:12:35 - main - INFO] Iter: 1600    Time: 7.773
+[14:12:35 - main - INFO] ------------  -------------
+[14:12:35 - main - INFO] ics_loss      2.647e-03
+[14:12:35 - main - INFO] res_loss      1.268e-01
+[14:12:35 - main - INFO] l2_error      1.798e+00
+[14:12:43 - main - INFO] ---------------------------
+[14:12:43 - main - INFO] Iter: 1700    Time: 7.721
+[14:12:43 - main - INFO] ------------  -------------
+[14:12:43 - main - INFO] ics_loss      1.966e-03
+[14:12:43 - main - INFO] res_loss      1.354e-01
+[14:12:43 - main - INFO] l2_error      1.801e+00
+[14:12:51 - main - INFO] ---------------------------
+[14:12:51 - main - INFO] Iter: 1800    Time: 7.653
+[14:12:51 - main - INFO] ------------  -------------
+[14:12:51 - main - INFO] ics_loss      3.970e-03
+[14:12:51 - main - INFO] res_loss      5.850e-01
+[14:12:51 - main - INFO] l2_error      1.749e+00
+[14:12:58 - main - INFO] ---------------------------
+[14:12:58 - main - INFO] Iter: 1900    Time: 7.708
+[14:12:58 - main - INFO] ------------  -------------
+[14:12:58 - main - INFO] ics_loss      2.005e-03
+[14:12:58 - main - INFO] res_loss      1.089e-01
+[14:12:58 - main - INFO] l2_error      1.763e+00
+[14:13:06 - main - INFO] ---------------------------
+[14:13:06 - main - INFO] Iter: 2000    Time: 7.819
+[14:13:06 - main - INFO] ------------  -------------
+[14:13:06 - main - INFO] ics_loss      1.200e-03
+[14:13:06 - main - INFO] res_loss      1.259e-01
+[14:13:06 - main - INFO] l2_error      1.747e+00
+[14:13:14 - main - INFO] ---------------------------
+[14:13:14 - main - INFO] Iter: 2100    Time: 7.720
+[14:13:14 - main - INFO] ------------  -------------
+[14:13:14 - main - INFO] ics_loss      1.917e-03
+[14:13:14 - main - INFO] res_loss      1.013e-01
+[14:13:14 - main - INFO] l2_error      1.725e+00
+[14:13:22 - main - INFO] ---------------------------
+[14:13:22 - main - INFO] Iter: 2200    Time: 7.970
+[14:13:22 - main - INFO] ------------  -------------
+[14:13:22 - main - INFO] ics_loss      3.261e-03
+[14:13:22 - main - INFO] res_loss      1.847e-01
+[14:13:22 - main - INFO] l2_error      1.720e+00
+[14:13:31 - main - INFO] ---------------------------
+[14:13:31 - main - INFO] Iter: 2300    Time: 8.513
+[14:13:31 - main - INFO] ------------  -------------
+[14:13:31 - main - INFO] ics_loss      2.495e-03
+[14:13:31 - main - INFO] res_loss      2.028e-01
+[14:13:31 - main - INFO] l2_error      1.723e+00
+[14:13:39 - main - INFO] ---------------------------
+[14:13:39 - main - INFO] Iter: 2400    Time: 8.165
+[14:13:39 - main - INFO] ------------  -------------
+[14:13:39 - main - INFO] ics_loss      6.848e-04
+[14:13:39 - main - INFO] res_loss      2.254e-01
+[14:13:39 - main - INFO] l2_error      1.725e+00
+[14:13:47 - main - INFO] ---------------------------
+[14:13:47 - main - INFO] Iter: 2500    Time: 7.978
+[14:13:47 - main - INFO] ------------  -------------
+[14:13:47 - main - INFO] ics_loss      9.547e-04
+[14:13:47 - main - INFO] res_loss      1.172e-01
+[14:13:47 - main - INFO] l2_error      1.743e+00
+[14:13:55 - main - INFO] ---------------------------
+[14:13:55 - main - INFO] Iter: 2600    Time: 7.998
+[14:13:55 - main - INFO] ------------  -------------
+[14:13:55 - main - INFO] ics_loss      1.713e-03
+[14:13:55 - main - INFO] res_loss      1.390e-01
+[14:13:55 - main - INFO] l2_error      1.714e+00
+[14:14:03 - main - INFO] ---------------------------
+[14:14:03 - main - INFO] Iter: 2700    Time: 8.243
+[14:14:03 - main - INFO] ------------  -------------
+[14:14:03 - main - INFO] ics_loss      2.584e-03
+[14:14:03 - main - INFO] res_loss      1.915e-01
+[14:14:03 - main - INFO] l2_error      1.744e+00
+[14:14:11 - main - INFO] ---------------------------
+[14:14:11 - main - INFO] Iter: 2800    Time: 7.791
+[14:14:11 - main - INFO] ------------  -------------
+[14:14:11 - main - INFO] ics_loss      1.110e-03
+[14:14:11 - main - INFO] res_loss      9.352e-02
+[14:14:11 - main - INFO] l2_error      1.807e+00
+[14:14:19 - main - INFO] ---------------------------
+[14:14:19 - main - INFO] Iter: 2900    Time: 7.903
+[14:14:19 - main - INFO] ------------  -------------
+[14:14:19 - main - INFO] ics_loss      7.550e-04
+[14:14:19 - main - INFO] res_loss      1.811e-01
+[14:14:19 - main - INFO] l2_error      1.775e+00
+[14:14:27 - main - INFO] ---------------------------
+[14:14:27 - main - INFO] Iter: 3000    Time: 8.271
+[14:14:27 - main - INFO] ------------  -------------
+[14:14:27 - main - INFO] ics_loss      7.438e-04
+[14:14:27 - main - INFO] res_loss      1.303e-01
+[14:14:27 - main - INFO] l2_error      1.797e+00
+[14:14:35 - main - INFO] ---------------------------
+[14:14:35 - main - INFO] Iter: 3100    Time: 8.082
+[14:14:35 - main - INFO] ------------  -------------
+[14:14:35 - main - INFO] ics_loss      6.646e-04
+[14:14:35 - main - INFO] res_loss      1.019e-01
+[14:14:35 - main - INFO] l2_error      1.867e+00
+[14:14:43 - main - INFO] ---------------------------
+[14:14:43 - main - INFO] Iter: 3200    Time: 7.909
+[14:14:43 - main - INFO] ------------  -------------
+[14:14:43 - main - INFO] ics_loss      5.551e-04
+[14:14:43 - main - INFO] res_loss      1.020e-01
+[14:14:43 - main - INFO] l2_error      1.871e+00
+[14:14:51 - main - INFO] ---------------------------
+[14:14:51 - main - INFO] Iter: 3300    Time: 7.824
+[14:14:51 - main - INFO] ------------  -------------
+[14:14:51 - main - INFO] ics_loss      5.113e-04
+[14:14:51 - main - INFO] res_loss      9.177e-02
+[14:14:51 - main - INFO] l2_error      1.897e+00
+[14:14:59 - main - INFO] ---------------------------
+[14:14:59 - main - INFO] Iter: 3400    Time: 8.416
+[14:14:59 - main - INFO] ------------  -------------
+[14:14:59 - main - INFO] ics_loss      1.481e-03
+[14:14:59 - main - INFO] res_loss      1.713e-01
+[14:14:59 - main - INFO] l2_error      1.869e+00
+[14:15:07 - main - INFO] ---------------------------
+[14:15:07 - main - INFO] Iter: 3500    Time: 7.947
+[14:15:07 - main - INFO] ------------  -------------
+[14:15:07 - main - INFO] ics_loss      6.134e-04
+[14:15:07 - main - INFO] res_loss      8.702e-02
+[14:15:07 - main - INFO] l2_error      1.918e+00
+[14:15:15 - main - INFO] ---------------------------
+[14:15:15 - main - INFO] Iter: 3600    Time: 7.584
+[14:15:15 - main - INFO] ------------  -------------
+[14:15:15 - main - INFO] ics_loss      1.819e-03
+[14:15:15 - main - INFO] res_loss      2.868e-01
+[14:15:15 - main - INFO] l2_error      1.950e+00
+[14:15:23 - main - INFO] ---------------------------
+[14:15:23 - main - INFO] Iter: 3700    Time: 8.020
+[14:15:23 - main - INFO] ------------  -------------
+[14:15:23 - main - INFO] ics_loss      1.175e-03
+[14:15:23 - main - INFO] res_loss      9.890e-02
+[14:15:23 - main - INFO] l2_error      2.001e+00
+[14:15:31 - main - INFO] ---------------------------
+[14:15:31 - main - INFO] Iter: 3800    Time: 7.963
+[14:15:31 - main - INFO] ------------  -------------
+[14:15:31 - main - INFO] ics_loss      5.404e-04
+[14:15:31 - main - INFO] res_loss      8.535e-02
+[14:15:31 - main - INFO] l2_error      1.988e+00
+[14:15:39 - main - INFO] ---------------------------
+[14:15:39 - main - INFO] Iter: 3900    Time: 7.974
+[14:15:39 - main - INFO] ------------  -------------
+[14:15:39 - main - INFO] ics_loss      1.856e-03
+[14:15:39 - main - INFO] res_loss      9.465e-02
+[14:15:39 - main - INFO] l2_error      2.045e+00
+[14:15:47 - main - INFO] ---------------------------
+[14:15:47 - main - INFO] Iter: 4000    Time: 7.985
+[14:15:47 - main - INFO] ------------  -------------
+[14:15:47 - main - INFO] ics_loss      2.960e-04
+[14:15:47 - main - INFO] res_loss      9.895e-02
+[14:15:47 - main - INFO] l2_error      2.053e+00
+[14:15:55 - main - INFO] ---------------------------
+[14:15:55 - main - INFO] Iter: 4100    Time: 8.000
+[14:15:55 - main - INFO] ------------  -------------
+[14:15:55 - main - INFO] ics_loss      6.255e-03
+[14:15:55 - main - INFO] res_loss      1.671e-01
+[14:15:55 - main - INFO] l2_error      2.056e+00
+[14:16:03 - main - INFO] ---------------------------
+[14:16:03 - main - INFO] Iter: 4200    Time: 8.162
+[14:16:03 - main - INFO] ------------  -------------
+[14:16:03 - main - INFO] ics_loss      8.311e-04
+[14:16:03 - main - INFO] res_loss      8.654e-02
+[14:16:03 - main - INFO] l2_error      2.055e+00
+[14:16:11 - main - INFO] ---------------------------
+[14:16:11 - main - INFO] Iter: 4300    Time: 7.953
+[14:16:11 - main - INFO] ------------  -------------
+[14:16:11 - main - INFO] ics_loss      6.568e-04
+[14:16:11 - main - INFO] res_loss      1.019e-01
+[14:16:11 - main - INFO] l2_error      2.056e+00
+[14:16:18 - main - INFO] ---------------------------
+[14:16:18 - main - INFO] Iter: 4400    Time: 7.658
+[14:16:18 - main - INFO] ------------  -------------
+[14:16:18 - main - INFO] ics_loss      6.841e-04
+[14:16:18 - main - INFO] res_loss      1.508e-01
+[14:16:18 - main - INFO] l2_error      2.001e+00
+[14:16:27 - main - INFO] ---------------------------
+[14:16:27 - main - INFO] Iter: 4500    Time: 8.181
+[14:16:27 - main - INFO] ------------  -------------
+[14:16:27 - main - INFO] ics_loss      1.547e-03
+[14:16:27 - main - INFO] res_loss      8.816e-02
+[14:16:27 - main - INFO] l2_error      2.045e+00
+[14:16:34 - main - INFO] ---------------------------
+[14:16:34 - main - INFO] Iter: 4600    Time: 7.775
+[14:16:34 - main - INFO] ------------  -------------
+[14:16:34 - main - INFO] ics_loss      3.708e-04
+[14:16:34 - main - INFO] res_loss      9.630e-02
+[14:16:34 - main - INFO] l2_error      1.989e+00
+[14:16:42 - main - INFO] ---------------------------
+[14:16:42 - main - INFO] Iter: 4700    Time: 7.721
+[14:16:42 - main - INFO] ------------  -------------
+[14:16:42 - main - INFO] ics_loss      9.125e-04
+[14:16:42 - main - INFO] res_loss      1.822e-01
+[14:16:42 - main - INFO] l2_error      2.054e+00
+[14:16:50 - main - INFO] ---------------------------
+[14:16:50 - main - INFO] Iter: 4800    Time: 7.788
+[14:16:50 - main - INFO] ------------  -------------
+[14:16:50 - main - INFO] ics_loss      2.493e-04
+[14:16:50 - main - INFO] res_loss      1.079e-01
+[14:16:50 - main - INFO] l2_error      2.033e+00
+[14:16:58 - main - INFO] ---------------------------
+[14:16:58 - main - INFO] Iter: 4900    Time: 7.742
+[14:16:58 - main - INFO] ------------  -------------
+[14:16:58 - main - INFO] ics_loss      3.823e-03
+[14:16:58 - main - INFO] res_loss      7.334e-02
+[14:16:58 - main - INFO] l2_error      2.109e+00
+[14:17:06 - main - INFO] ---------------------------
+[14:17:06 - main - INFO] Iter: 5000    Time: 8.037
+[14:17:06 - main - INFO] ------------  -------------
+[14:17:06 - main - INFO] ics_loss      4.698e-04
+[14:17:06 - main - INFO] res_loss      1.404e-01
+[14:17:06 - main - INFO] l2_error      2.056e+00
+[14:17:13 - main - INFO] ---------------------------
+[14:17:13 - main - INFO] Iter: 5100    Time: 7.802
+[14:17:13 - main - INFO] ------------  -------------
+[14:17:13 - main - INFO] ics_loss      7.497e-04
+[14:17:13 - main - INFO] res_loss      1.132e-01
+[14:17:13 - main - INFO] l2_error      2.043e+00
+[14:17:21 - main - INFO] ---------------------------
+[14:17:21 - main - INFO] Iter: 5200    Time: 7.911
+[14:17:21 - main - INFO] ------------  -------------
+[14:17:21 - main - INFO] ics_loss      1.305e-03
+[14:17:21 - main - INFO] res_loss      9.670e-02
+[14:17:21 - main - INFO] l2_error      1.980e+00
+[14:17:29 - main - INFO] ---------------------------
+[14:17:29 - main - INFO] Iter: 5300    Time: 7.912
+[14:17:29 - main - INFO] ------------  -------------
+[14:17:29 - main - INFO] ics_loss      4.937e-04
+[14:17:29 - main - INFO] res_loss      8.215e-02
+[14:17:29 - main - INFO] l2_error      2.039e+00
+[14:17:37 - main - INFO] ---------------------------
+[14:17:37 - main - INFO] Iter: 5400    Time: 7.963
+[14:17:37 - main - INFO] ------------  -------------
+[14:17:37 - main - INFO] ics_loss      1.335e-03
+[14:17:37 - main - INFO] res_loss      8.799e-02
+[14:17:37 - main - INFO] l2_error      2.048e+00
+[14:17:45 - main - INFO] ---------------------------
+[14:17:45 - main - INFO] Iter: 5500    Time: 7.727
+[14:17:45 - main - INFO] ------------  -------------
+[14:17:45 - main - INFO] ics_loss      1.233e-03
+[14:17:45 - main - INFO] res_loss      3.814e-01
+[14:17:45 - main - INFO] l2_error      1.946e+00
+[14:17:53 - main - INFO] ---------------------------
+[14:17:53 - main - INFO] Iter: 5600    Time: 8.241
+[14:17:53 - main - INFO] ------------  -------------
+[14:17:53 - main - INFO] ics_loss      6.123e-04
+[14:17:53 - main - INFO] res_loss      1.182e-01
+[14:17:53 - main - INFO] l2_error      2.082e+00
+[14:18:01 - main - INFO] ---------------------------
+[14:18:01 - main - INFO] Iter: 5700    Time: 8.092
+[14:18:01 - main - INFO] ------------  -------------
+[14:18:01 - main - INFO] ics_loss      3.831e-04
+[14:18:01 - main - INFO] res_loss      7.661e-02
+[14:18:01 - main - INFO] l2_error      2.039e+00
+[14:18:09 - main - INFO] ---------------------------
+[14:18:09 - main - INFO] Iter: 5800    Time: 7.712
+[14:18:09 - main - INFO] ------------  -------------
+[14:18:09 - main - INFO] ics_loss      5.027e-03
+[14:18:09 - main - INFO] res_loss      1.467e-01
+[14:18:09 - main - INFO] l2_error      1.681e+00
+[14:18:17 - main - INFO] ---------------------------
+[14:18:17 - main - INFO] Iter: 5900    Time: 7.965
+[14:18:17 - main - INFO] ------------  -------------
+[14:18:17 - main - INFO] ics_loss      1.727e-03
+[14:18:17 - main - INFO] res_loss      6.928e-02
+[14:18:17 - main - INFO] l2_error      1.752e+00
+[14:18:25 - main - INFO] ---------------------------
+[14:18:25 - main - INFO] Iter: 6000    Time: 8.235
+[14:18:25 - main - INFO] ------------  -------------
+[14:18:25 - main - INFO] ics_loss      8.856e-04
+[14:18:25 - main - INFO] res_loss      8.836e-02
+[14:18:25 - main - INFO] l2_error      1.775e+00
+[14:18:33 - main - INFO] ---------------------------
+[14:18:33 - main - INFO] Iter: 6100    Time: 8.195
+[14:18:33 - main - INFO] ------------  -------------
+[14:18:33 - main - INFO] ics_loss      1.480e-03
+[14:18:33 - main - INFO] res_loss      1.605e-01
+[14:18:33 - main - INFO] l2_error      1.820e+00
+[14:18:41 - main - INFO] ---------------------------
+[14:18:41 - main - INFO] Iter: 6200    Time: 7.858
+[14:18:41 - main - INFO] ------------  -------------
+[14:18:41 - main - INFO] ics_loss      6.018e-04
+[14:18:41 - main - INFO] res_loss      1.508e-01
+[14:18:41 - main - INFO] l2_error      1.857e+00
+[14:18:49 - main - INFO] ---------------------------
+[14:18:49 - main - INFO] Iter: 6300    Time: 7.664
+[14:18:49 - main - INFO] ------------  -------------
+[14:18:49 - main - INFO] ics_loss      1.076e-03
+[14:18:49 - main - INFO] res_loss      8.015e-02
+[14:18:49 - main - INFO] l2_error      1.847e+00
+[14:18:57 - main - INFO] ---------------------------
+[14:18:57 - main - INFO] Iter: 6400    Time: 8.163
+[14:18:57 - main - INFO] ------------  -------------
+[14:18:57 - main - INFO] ics_loss      1.729e-03
+[14:18:57 - main - INFO] res_loss      1.269e-01
+[14:18:57 - main - INFO] l2_error      1.825e+00
+[14:19:05 - main - INFO] ---------------------------
+[14:19:05 - main - INFO] Iter: 6500    Time: 8.006
+[14:19:05 - main - INFO] ------------  -------------
+[14:19:05 - main - INFO] ics_loss      2.237e-03
+[14:19:05 - main - INFO] res_loss      8.672e-02
+[14:19:05 - main - INFO] l2_error      1.825e+00
+[14:19:13 - main - INFO] ---------------------------
+[14:19:13 - main - INFO] Iter: 6600    Time: 7.863
+[14:19:13 - main - INFO] ------------  -------------
+[14:19:13 - main - INFO] ics_loss      1.775e-03
+[14:19:13 - main - INFO] res_loss      1.539e-01
+[14:19:13 - main - INFO] l2_error      1.836e+00
+[14:19:21 - main - INFO] ---------------------------
+[14:19:21 - main - INFO] Iter: 6700    Time: 7.659
+[14:19:21 - main - INFO] ------------  -------------
+[14:19:21 - main - INFO] ics_loss      5.300e-04
+[14:19:21 - main - INFO] res_loss      8.882e-02
+[14:19:21 - main - INFO] l2_error      1.774e+00
+[14:19:28 - main - INFO] ---------------------------
+[14:19:28 - main - INFO] Iter: 6800    Time: 7.879
+[14:19:28 - main - INFO] ------------  -------------
+[14:19:28 - main - INFO] ics_loss      1.658e-03
+[14:19:28 - main - INFO] res_loss      7.249e-02
+[14:19:28 - main - INFO] l2_error      1.837e+00
+[14:19:36 - main - INFO] ---------------------------
+[14:19:36 - main - INFO] Iter: 6900    Time: 7.623
+[14:19:36 - main - INFO] ------------  -------------
+[14:19:36 - main - INFO] ics_loss      5.268e-04
+[14:19:36 - main - INFO] res_loss      1.375e-01
+[14:19:36 - main - INFO] l2_error      1.774e+00
+[14:19:44 - main - INFO] ---------------------------
+[14:19:44 - main - INFO] Iter: 7000    Time: 8.010
+[14:19:44 - main - INFO] ------------  -------------
+[14:19:44 - main - INFO] ics_loss      2.980e-03
+[14:19:44 - main - INFO] res_loss      7.167e-02
+[14:19:44 - main - INFO] l2_error      1.724e+00
+[14:19:52 - main - INFO] ---------------------------
+[14:19:52 - main - INFO] Iter: 7100    Time: 7.898
+[14:19:52 - main - INFO] ------------  -------------
+[14:19:52 - main - INFO] ics_loss      1.708e-03
+[14:19:52 - main - INFO] res_loss      8.650e-02
+[14:19:52 - main - INFO] l2_error      1.697e+00
+[14:20:00 - main - INFO] ---------------------------
+[14:20:00 - main - INFO] Iter: 7200    Time: 7.884
+[14:20:00 - main - INFO] ------------  -------------
+[14:20:00 - main - INFO] ics_loss      8.202e-04
+[14:20:00 - main - INFO] res_loss      7.042e-02
+[14:20:00 - main - INFO] l2_error      1.683e+00
+[14:20:08 - main - INFO] ---------------------------
+[14:20:08 - main - INFO] Iter: 7300    Time: 7.742
+[14:20:08 - main - INFO] ------------  -------------
+[14:20:08 - main - INFO] ics_loss      9.581e-04
+[14:20:08 - main - INFO] res_loss      9.778e-02
+[14:20:08 - main - INFO] l2_error      1.716e+00
+Traceback (most recent call last):
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/adv/main.py", line 40, in <module>
+    app.run(main)
+  File "/home/david/anaconda3/lib/python3.12/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+  File "/home/david/anaconda3/lib/python3.12/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ^^^^^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/adv/main.py", line 32, in main
+    train.train_and_evaluate(FLAGS.config, FLAGS.workdir)
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/adv/train.py", line 59, in train_and_evaluate
+    batch = next(res_sampler)
+            ^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/lib/python3.12/site-packages/jaxpi/samplers.py", line 20, in __getitem__
+    batch = self.data_generation(keys)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/lib/python3.12/site-packages/jax/_src/api.py", line 1607, in <lambda>
+    lambda x, s: pxla.shard_args([s], [None], [None], [x])[0],
+
+KeyboardInterrupt

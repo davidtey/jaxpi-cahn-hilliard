@@ -1,0 +1,25 @@
+I0208 19:14:52.215540 140712619652160 train.py:232] Training time window 1
+Waiting for JIT...
+Traceback (most recent call last):
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/ns_unsteady_cylinder/main.py", line 41, in <module>
+    app.run(main)
+    ~~~~~~~^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ~~~~^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/ns_unsteady_cylinder/main.py", line 33, in main
+    train.train_and_evaluate(FLAGS.config, FLAGS.workdir)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/ns_unsteady_cylinder/train.py", line 288, in train_and_evaluate
+    model = train_one_window(config, workdir, model, samplers, idx)
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/ns_unsteady_cylinder/train.py", line 124, in train_one_window
+    batch[key] = next(sampler)
+                 ~~~~^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jaxpi/samplers.py", line 20, in __getitem__
+    batch = self.data_generation(keys)
+jaxlib.xla_extension.XlaRuntimeError: INVALID_ARGUMENT: executable is built for device CUDA:0 of type "NVIDIA GeForce RTX 4090"; cannot run it on device CUDA:1 of type "NVIDIA GeForce GTX 1650"
+--------------------
+For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.

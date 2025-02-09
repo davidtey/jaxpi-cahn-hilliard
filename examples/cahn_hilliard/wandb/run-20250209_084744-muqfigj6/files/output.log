@@ -1,0 +1,52 @@
+Training time window 1
+Waiting for JIT...
+Device: gpu
+[08:48:31 - main - INFO] ---------------------------
+[08:48:31 - main - INFO] Iter:   0    Time: 44.006
+[08:48:31 - main - INFO] -----------  --------------
+[08:48:31 - main - INFO] ics_loss     1.259e+01
+[08:48:31 - main - INFO] res_loss     6.765e+01
+[08:48:31 - main - INFO] l2_error     3.576e+00
+{'ics_loss': Array(12.594708, dtype=float32), 'res_loss': Array(67.65204, dtype=float32), 'ics_weight': array(1.879647, dtype=float32), 'res_weight': array(0.9526892, dtype=float32), 'cas_weight': Array(0., dtype=float32), 'l2_error': Array(3.5762923, dtype=float32)}
+Traceback (most recent call last):
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 43, in <module>
+    app.run(main)
+    ~~~~~~~^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ~~~~^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 35, in main
+    train.train_and_evaluate(FLAGS.config, FLAGS.workdir)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 116, in train_and_evaluate
+    model = train_one_window(config, workdir, model, samplers, u, idx)
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 61, in train_one_window
+    if model.ics_loss < config.training.ics_error_break and model.res_loss < config.training.res_error_break:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/numpy/array_methods.py", line 1061, in op
+    return getattr(self.aval, f"_{name}")(self, *args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/numpy/array_methods.py", line 578, in deferring_binary_op
+    return binary_op(*args)
+jax.errors.UnexpectedTracerError: Encountered an unexpected tracer. A function transformed by JAX had a side effect, allowing for a reference to an intermediate value with type float32[] wrapped in a DynamicJaxprTracer to escape the scope of the transformation.
+JAX transformations require that functions explicitly return their outputs, and disallow saving intermediate values to global state.
+The function being traced when the value leaked was losses at /home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/models.py:71 traced for jit.
+------------------------------
+The leaked intermediate value was created on line /home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/models.py:79:19 (CH.losses).
+------------------------------
+When the value was created, the final 5 stack frames (most recent last) excluding JAX-internal frames were:
+------------------------------
+/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py:35:8 (main)
+/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py:116:16 (train_and_evaluate)
+/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py:53:27 (train_one_window)
+/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/models.py:159:24 (CHEvaluator.__call__)
+/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/models.py:79:19 (CH.losses)
+------------------------------
+
+To catch the leak earlier, try setting the environment variable JAX_CHECK_TRACER_LEAKS or using the `jax.checking_leaks` context manager.
+See https://jax.readthedocs.io/en/latest/errors.html#jax.errors.UnexpectedTracerError
+--------------------
+For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.

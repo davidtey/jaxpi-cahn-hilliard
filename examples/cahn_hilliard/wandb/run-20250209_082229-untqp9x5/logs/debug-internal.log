@@ -1,0 +1,10 @@
+{"time":"2025-02-09T08:22:29.693001518+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.5","symlink path":"/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/wandb/run-20250209_082229-untqp9x5/logs/debug-core.log"}
+{"time":"2025-02-09T08:22:29.94914944+08:00","level":"INFO","msg":"created new stream","id":"untqp9x5"}
+{"time":"2025-02-09T08:22:29.949180359+08:00","level":"INFO","msg":"stream: started","id":"untqp9x5"}
+{"time":"2025-02-09T08:22:29.949204877+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"untqp9x5"}
+{"time":"2025-02-09T08:22:29.949276498+08:00","level":"INFO","msg":"handler: started","stream_id":"untqp9x5"}
+{"time":"2025-02-09T08:22:29.94929531+08:00","level":"INFO","msg":"sender: started","stream_id":"untqp9x5"}
+{"time":"2025-02-09T08:22:30.314237869+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-09T08:33:16.862087875+08:00","level":"INFO","msg":"stream: closing","id":"untqp9x5"}
+{"time":"2025-02-09T08:33:16.862463889+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-09T08:33:16.862897914+08:00","level":"INFO","msg":"Stopped system monitor"}

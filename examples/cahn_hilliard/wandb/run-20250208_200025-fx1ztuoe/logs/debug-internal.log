@@ -1,0 +1,11 @@
+{"time":"2025-02-08T20:00:25.428955949+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.5","symlink path":"/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/wandb/run-20250208_200025-fx1ztuoe/logs/debug-core.log"}
+{"time":"2025-02-08T20:00:25.553742746+08:00","level":"INFO","msg":"created new stream","id":"fx1ztuoe"}
+{"time":"2025-02-08T20:00:25.553771928+08:00","level":"INFO","msg":"stream: started","id":"fx1ztuoe"}
+{"time":"2025-02-08T20:00:25.553794718+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"fx1ztuoe"}
+{"time":"2025-02-08T20:00:25.553886399+08:00","level":"INFO","msg":"sender: started","stream_id":"fx1ztuoe"}
+{"time":"2025-02-08T20:00:25.553922164+08:00","level":"INFO","msg":"handler: started","stream_id":"fx1ztuoe"}
+{"time":"2025-02-08T20:00:25.838488189+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-08T20:03:38.943973805+08:00","level":"INFO","msg":"stream: closing","id":"fx1ztuoe"}
+{"time":"2025-02-08T20:03:38.94400628+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-08T20:03:38.944510305+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-08T20:03:40.471762634+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}

@@ -1,0 +1,37 @@
+Training time window 1
+Waiting for JIT...
+[17:40:46 - main - INFO] ---------------------------
+[17:40:46 - main - INFO] Iter:   0    Time: 33.915
+[17:40:46 - main - INFO] -----------  --------------
+[17:40:46 - main - INFO] ics_loss     7.088e-01
+[17:40:46 - main - INFO] res_loss     2.517e+03
+[17:40:46 - main - INFO] l2_error     1.153e+00
+[17:42:14 - main - INFO] ---------------------------
+[17:42:14 - main - INFO] Iter: 100    Time: 87.723
+[17:42:14 - main - INFO] -----------  --------------
+[17:42:14 - main - INFO] ics_loss     5.001e-01
+[17:42:14 - main - INFO] res_loss     9.357e-02
+[17:42:14 - main - INFO] l2_error     1.030e+00
+Traceback (most recent call last):
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 41, in <module>
+    app.run(main)
+    ~~~~~~~^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ~~~~^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 33, in main
+    train.train_and_evaluate(FLAGS.config, FLAGS.workdir)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 96, in train_and_evaluate
+    model = train_one_window(config, workdir, model, res_sampler, u, idx)
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 31, in train_one_window
+    batch = next(res_sampler)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jaxpi/samplers.py", line 20, in __getitem__
+    batch = self.data_generation(keys)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/api.py", line 1607, in <lambda>
+    lambda x, s: pxla.shard_args([s], [None], [None], [x])[0],
+
+KeyboardInterrupt

@@ -1,0 +1,11 @@
+{"time":"2025-02-08T13:57:19.545200652+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.5","symlink path":"/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/wandb/run-20250208_135719-qydvkpa2/logs/debug-core.log"}
+{"time":"2025-02-08T13:57:19.681612771+08:00","level":"INFO","msg":"created new stream","id":"qydvkpa2"}
+{"time":"2025-02-08T13:57:19.681644397+08:00","level":"INFO","msg":"stream: started","id":"qydvkpa2"}
+{"time":"2025-02-08T13:57:19.681724724+08:00","level":"INFO","msg":"handler: started","stream_id":"qydvkpa2"}
+{"time":"2025-02-08T13:57:19.682779119+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"qydvkpa2"}
+{"time":"2025-02-08T13:57:19.683464109+08:00","level":"INFO","msg":"sender: started","stream_id":"qydvkpa2"}
+{"time":"2025-02-08T13:57:20.118729521+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-08T14:11:26.315227797+08:00","level":"INFO","msg":"stream: closing","id":"qydvkpa2"}
+{"time":"2025-02-08T14:11:26.315329696+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-08T14:11:26.315809627+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-08T14:11:27.879346634+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}

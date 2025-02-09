@@ -1,0 +1,16 @@
+{"time":"2025-02-01T14:23:46.171144806+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.5","symlink path":"/home/david/work/repos/deep-learning-pde/jaxpi/examples/ks/wandb/run-20250201_142345-zlj7s0gr/logs/debug-core.log"}
+{"time":"2025-02-01T14:23:46.279248478+08:00","level":"INFO","msg":"created new stream","id":"zlj7s0gr"}
+{"time":"2025-02-01T14:23:46.2792766+08:00","level":"INFO","msg":"stream: started","id":"zlj7s0gr"}
+{"time":"2025-02-01T14:23:46.279306767+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"zlj7s0gr"}
+{"time":"2025-02-01T14:23:46.279347445+08:00","level":"INFO","msg":"sender: started","stream_id":"zlj7s0gr"}
+{"time":"2025-02-01T14:23:46.27936399+08:00","level":"INFO","msg":"handler: started","stream_id":"zlj7s0gr"}
+{"time":"2025-02-01T14:23:46.641282943+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-01T14:50:47.539856621+08:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/davidteyby-david-tey/PINN-KS/zlj7s0gr/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-02-01T16:24:25.535374879+08:00","level":"INFO","msg":"stream: closing","id":"zlj7s0gr"}
+{"time":"2025-02-01T16:24:25.535408024+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-01T16:24:25.536058846+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-01T16:24:27.166957154+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-01T16:24:27.788517846+08:00","level":"INFO","msg":"handler: closed","stream_id":"zlj7s0gr"}
+{"time":"2025-02-01T16:24:27.788543905+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"zlj7s0gr"}
+{"time":"2025-02-01T16:24:27.788558277+08:00","level":"INFO","msg":"sender: closed","stream_id":"zlj7s0gr"}
+{"time":"2025-02-01T16:24:27.788620565+08:00","level":"INFO","msg":"stream: closed","id":"zlj7s0gr"}

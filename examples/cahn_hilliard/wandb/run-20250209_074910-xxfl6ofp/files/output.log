@@ -1,0 +1,149 @@
+Training time window 1
+Waiting for JIT...
+Device: gpu
+[07:50:01 - main - INFO] ---------------------------
+[07:50:01 - main - INFO] Iter:   0    Time: 47.885
+[07:50:01 - main - INFO] -----------  --------------
+[07:50:01 - main - INFO] ics_loss     1.252e+01
+[07:50:01 - main - INFO] res_loss     7.004e+01
+[07:50:01 - main - INFO] l2_error     3.126e+00
+[07:50:15 - main - INFO] ---------------------------
+[07:50:15 - main - INFO] Iter: 100    Time: 14.662
+[07:50:15 - main - INFO] -----------  --------------
+[07:50:15 - main - INFO] ics_loss     2.009e-03
+[07:50:15 - main - INFO] res_loss     5.432e-03
+[07:50:15 - main - INFO] l2_error     7.004e-01
+[07:50:17 - main - INFO] --------------------------
+[07:50:17 - main - INFO] Iter: 200    Time: 1.397
+[07:50:17 - main - INFO] -----------  -------------
+[07:50:17 - main - INFO] ics_loss     1.731e-03
+[07:50:17 - main - INFO] res_loss     4.363e-03
+[07:50:17 - main - INFO] l2_error     6.325e-01
+[07:50:18 - main - INFO] --------------------------
+[07:50:18 - main - INFO] Iter: 300    Time: 1.379
+[07:50:18 - main - INFO] -----------  -------------
+[07:50:18 - main - INFO] ics_loss     1.613e-03
+[07:50:18 - main - INFO] res_loss     3.784e-03
+[07:50:18 - main - INFO] l2_error     6.181e-01
+[07:50:20 - main - INFO] --------------------------
+[07:50:20 - main - INFO] Iter: 400    Time: 1.412
+[07:50:20 - main - INFO] -----------  -------------
+[07:50:20 - main - INFO] ics_loss     1.584e-03
+[07:50:20 - main - INFO] res_loss     3.904e-03
+[07:50:20 - main - INFO] l2_error     6.174e-01
+[07:50:21 - main - INFO] --------------------------
+[07:50:21 - main - INFO] Iter: 500    Time: 1.434
+[07:50:21 - main - INFO] -----------  -------------
+[07:50:21 - main - INFO] ics_loss     1.555e-03
+[07:50:21 - main - INFO] res_loss     3.983e-03
+[07:50:21 - main - INFO] l2_error     6.173e-01
+[07:50:22 - main - INFO] --------------------------
+[07:50:22 - main - INFO] Iter: 600    Time: 1.391
+[07:50:22 - main - INFO] -----------  -------------
+[07:50:22 - main - INFO] ics_loss     1.503e-03
+[07:50:22 - main - INFO] res_loss     3.664e-03
+[07:50:22 - main - INFO] l2_error     6.151e-01
+[07:50:24 - main - INFO] --------------------------
+[07:50:24 - main - INFO] Iter: 700    Time: 1.378
+[07:50:24 - main - INFO] -----------  -------------
+[07:50:24 - main - INFO] ics_loss     1.487e-03
+[07:50:24 - main - INFO] res_loss     3.889e-03
+[07:50:24 - main - INFO] l2_error     6.147e-01
+[07:50:25 - main - INFO] --------------------------
+[07:50:25 - main - INFO] Iter: 800    Time: 1.404
+[07:50:25 - main - INFO] -----------  -------------
+[07:50:25 - main - INFO] ics_loss     1.501e-03
+[07:50:25 - main - INFO] res_loss     4.082e-03
+[07:50:25 - main - INFO] l2_error     6.165e-01
+[07:50:27 - main - INFO] --------------------------
+[07:50:27 - main - INFO] Iter: 900    Time: 1.431
+[07:50:27 - main - INFO] -----------  -------------
+[07:50:27 - main - INFO] ics_loss     1.435e-03
+[07:50:27 - main - INFO] res_loss     3.874e-03
+[07:50:27 - main - INFO] l2_error     6.139e-01
+[07:50:45 - main - INFO] ----------------------------
+[07:50:45 - main - INFO] Iter: 1000    Time: 18.404
+[07:50:45 - main - INFO] ------------  --------------
+[07:50:45 - main - INFO] ics_loss      1.429e-03
+[07:50:45 - main - INFO] res_loss      3.488e-03
+[07:50:45 - main - INFO] l2_error      6.130e-01
+[07:50:47 - main - INFO] ---------------------------
+[07:50:47 - main - INFO] Iter: 1100    Time: 1.412
+[07:50:47 - main - INFO] ------------  -------------
+[07:50:47 - main - INFO] ics_loss      1.387e-03
+[07:50:47 - main - INFO] res_loss      3.645e-03
+[07:50:47 - main - INFO] l2_error      6.129e-01
+[07:50:48 - main - INFO] ---------------------------
+[07:50:48 - main - INFO] Iter: 1200    Time: 1.405
+[07:50:48 - main - INFO] ------------  -------------
+[07:50:48 - main - INFO] ics_loss      1.379e-03
+[07:50:48 - main - INFO] res_loss      3.514e-03
+[07:50:48 - main - INFO] l2_error      6.136e-01
+[07:50:49 - main - INFO] ---------------------------
+[07:50:49 - main - INFO] Iter: 1300    Time: 1.415
+[07:50:49 - main - INFO] ------------  -------------
+[07:50:49 - main - INFO] ics_loss      1.354e-03
+[07:50:49 - main - INFO] res_loss      3.648e-03
+[07:50:49 - main - INFO] l2_error      6.140e-01
+[07:50:51 - main - INFO] ---------------------------
+[07:50:51 - main - INFO] Iter: 1400    Time: 1.383
+[07:50:51 - main - INFO] ------------  -------------
+[07:50:51 - main - INFO] ics_loss      1.377e-03
+[07:50:51 - main - INFO] res_loss      3.687e-03
+[07:50:51 - main - INFO] l2_error      6.150e-01
+[07:50:52 - main - INFO] ---------------------------
+[07:50:52 - main - INFO] Iter: 1500    Time: 1.416
+[07:50:52 - main - INFO] ------------  -------------
+[07:50:52 - main - INFO] ics_loss      1.356e-03
+[07:50:52 - main - INFO] res_loss      3.427e-03
+[07:50:52 - main - INFO] l2_error      6.135e-01
+[07:50:54 - main - INFO] ---------------------------
+[07:50:54 - main - INFO] Iter: 1600    Time: 1.450
+[07:50:54 - main - INFO] ------------  -------------
+[07:50:54 - main - INFO] ics_loss      1.329e-03
+[07:50:54 - main - INFO] res_loss      3.541e-03
+[07:50:54 - main - INFO] l2_error      6.137e-01
+Traceback (most recent call last):
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 43, in <module>
+    app.run(main)
+    ~~~~~~~^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ~~~~^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 35, in main
+    train.train_and_evaluate(FLAGS.config, FLAGS.workdir)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 109, in train_and_evaluate
+    model = train_one_window(config, workdir, model, samplers, u, idx)
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 49, in train_one_window
+    state = jax.device_get(tree_map(lambda x: x[0], model.state))
+                           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/tree_util.py", line 358, in tree_map
+    return treedef.unflatten(f(*xs) for xs in zip(*all_leaves))
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/tree_util.py", line 358, in <genexpr>
+    return treedef.unflatten(f(*xs) for xs in zip(*all_leaves))
+                             ~^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 49, in <lambda>
+    state = jax.device_get(tree_map(lambda x: x[0], model.state))
+                                              ~^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/array.py", line 364, in __getitem__
+    out = lax.squeeze(out, dimensions=dims)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/lax/lax.py", line 2089, in squeeze
+    return squeeze_p.bind(array, dimensions=dimensions)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/core.py", line 463, in bind
+    return self.bind_with_trace(prev_trace, args, params)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/core.py", line 468, in bind_with_trace
+    return trace.process_primitive(self, args, params)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/core.py", line 954, in process_primitive
+    return primitive.impl(*args, **params)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/dispatch.py", line 89, in apply_primitive
+    outs = fun(*args)
+KeyboardInterrupt

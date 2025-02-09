@@ -1,0 +1,46 @@
+{
+  "os": "Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "python": "CPython 3.13.1",
+  "startedAt": "2025-02-08T23:49:10.396347Z",
+  "program": "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py",
+  "codePath": "examples/cahn_hilliard/main.py",
+  "git": {
+    "remote": "https://github.com/PredictiveIntelligenceLab/jaxpi.git",
+    "commit": "5d5ee8f5a6bed061cfd86f631bcb2a70dd20bb01"
+  },
+  "email": "davidteyby@gmail.com",
+  "root": "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard",
+  "host": "david",
+  "executable": "/home/david/anaconda3/envs/jaxpi/bin/python",
+  "codePathLocal": "main.py",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "gpu_count": 2,
+  "disk": {
+    "/": {
+      "total": "269427478528",
+      "used": "157142716416"
+    }
+  },
+  "memory": {
+    "total": "16653840384"
+  },
+  "cpu": {
+    "count": 8,
+    "countLogical": 16
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4090",
+      "memoryTotal": "25757220864",
+      "architecture": "Ada"
+    },
+    {
+      "name": "NVIDIA GeForce GTX 1650",
+      "memoryTotal": "4294967296",
+      "architecture": "Turing"
+    }
+  ],
+  "cudaVersion": "12.6"
+}

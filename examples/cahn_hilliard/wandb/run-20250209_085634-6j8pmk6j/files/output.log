@@ -1,0 +1,44 @@
+Training time window 1
+Waiting for JIT...
+Device: gpu
+[08:57:21 - main - INFO] ---------------------------
+[08:57:21 - main - INFO] Iter:   0    Time: 44.141
+[08:57:21 - main - INFO] -----------  --------------
+[08:57:21 - main - INFO] ics_loss     1.259e+01
+[08:57:21 - main - INFO] res_loss     6.765e+01
+[08:57:21 - main - INFO] l2_error     3.576e+00
+{'ics_loss': Array(12.594708, dtype=float32), 'res_loss': Array(67.65204, dtype=float32), 'ics_weight': array(1.879647, dtype=float32), 'res_weight': array(0.9526892, dtype=float32), 'cas_weight': Array(0., dtype=float32), 'l2_error': Array(3.5762923, dtype=float32)}
+[08:57:37 - main - INFO] ---------------------------
+[08:57:37 - main - INFO] Iter: 250    Time: 15.911
+[08:57:37 - main - INFO] -----------  --------------
+[08:57:37 - main - INFO] ics_loss     1.753e-03
+[08:57:37 - main - INFO] res_loss     5.473e-03
+[08:57:37 - main - INFO] l2_error     4.571e-01
+{'ics_loss': Array(0.00175275, dtype=float32), 'res_loss': Array(0.00547295, dtype=float32), 'ics_weight': array(1.879647, dtype=float32), 'res_weight': array(0.9526892, dtype=float32), 'cas_weight': Array(0.82937557, dtype=float32), 'l2_error': Array(0.45706004, dtype=float32)}
+[08:57:41 - main - INFO] --------------------------
+[08:57:41 - main - INFO] Iter: 500    Time: 3.259
+[08:57:41 - main - INFO] -----------  -------------
+[08:57:41 - main - INFO] ics_loss     1.686e-03
+[08:57:41 - main - INFO] res_loss     5.297e-03
+[08:57:41 - main - INFO] l2_error     4.528e-01
+{'ics_loss': Array(0.0016863, dtype=float32), 'res_loss': Array(0.00529727, dtype=float32), 'ics_weight': array(1.879647, dtype=float32), 'res_weight': array(0.9526892, dtype=float32), 'cas_weight': Array(0.83393866, dtype=float32), 'l2_error': Array(0.45278692, dtype=float32)}
+Traceback (most recent call last):
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 43, in <module>
+    app.run(main)
+    ~~~~~~~^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ~~~~^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 35, in main
+    train.train_and_evaluate(FLAGS.config, FLAGS.workdir)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 116, in train_and_evaluate
+    model = train_one_window(config, workdir, model, samplers, u, idx)
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 40, in train_one_window
+    model.state = model.step(model.state, batch)
+                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 1, in <lambda>
+KeyboardInterrupt

@@ -1,0 +1,77 @@
+Training time window 1
+Waiting for JIT...
+Device: gpu
+{'params': {'Dense_0': {'bias': Traced<ShapedArray(float32[256])>with<DynamicJaxprTrace>, 'kernel': (Traced<ShapedArray(float32[256])>with<DynamicJaxprTrace>, Traced<ShapedArray(float32[256,256])>with<DynamicJaxprTrace>)}, 'Dense_1': {'bias': Traced<ShapedArray(float32[256])>with<DynamicJaxprTrace>, 'kernel': (Traced<ShapedArray(float32[256])>with<DynamicJaxprTrace>, Traced<ShapedArray(float32[256,256])>with<DynamicJaxprTrace>)}, 'Dense_2': {'bias': Traced<ShapedArray(float32[256])>with<DynamicJaxprTrace>, 'kernel': (Traced<ShapedArray(float32[256])>with<DynamicJaxprTrace>, Traced<ShapedArray(float32[256,256])>with<DynamicJaxprTrace>)}, 'Dense_3': {'bias': Traced<ShapedArray(float32[256])>with<DynamicJaxprTrace>, 'kernel': (Traced<ShapedArray(float32[256])>with<DynamicJaxprTrace>, Traced<ShapedArray(float32[256,256])>with<DynamicJaxprTrace>)}, 'Dense_4': {'bias': Traced<ShapedArray(float32[256])>with<DynamicJaxprTrace>, 'kernel': (Traced<ShapedArray(float32[256])>with<DynamicJaxprTrace>, Traced<ShapedArray(float32[256,256])>with<DynamicJaxprTrace>)}, 'Dense_5': {'bias': Traced<ShapedArray(float32[256])>with<DynamicJaxprTrace>, 'kernel': (Traced<ShapedArray(float32[256])>with<DynamicJaxprTrace>, Traced<ShapedArray(float32[256,256])>with<DynamicJaxprTrace>)}, 'Dense_6': {'bias': Traced<ShapedArray(float32[256])>with<DynamicJaxprTrace>, 'kernel': (Traced<ShapedArray(float32[256])>with<DynamicJaxprTrace>, Traced<ShapedArray(float32[256,256])>with<DynamicJaxprTrace>)}, 'Dense_7': {'bias': Traced<ShapedArray(float32[1])>with<DynamicJaxprTrace>, 'kernel': (Traced<ShapedArray(float32[1])>with<DynamicJaxprTrace>, Traced<ShapedArray(float32[256,1])>with<DynamicJaxprTrace>)}, 'FourierEmbs_0': {'kernel': Traced<ShapedArray(float32[2,128])>with<DynamicJaxprTrace>}}}
+Traceback (most recent call last):
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 43, in <module>
+    app.run(main)
+    ~~~~~~~^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ~~~~^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py", line 35, in main
+    train.train_and_evaluate(FLAGS.config, FLAGS.workdir)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 109, in train_and_evaluate
+    model = train_one_window(config, workdir, model, samplers, u, idx)
+  File "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/train.py", line 43, in train_one_window
+    model.state = model.update_weights(model.state, batch)
+                  ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/traceback_util.py", line 180, in reraise_with_filtered_traceback
+    return fun(*args, **kwargs)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/api.py", line 1558, in cache_miss
+    execute = pxla.xla_pmap_impl_lazy(p.flat_fun, *p.flat_args, **params)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/interpreters/pxla.py", line 353, in xla_pmap_impl_lazy
+    compiled_fun, fingerprint = parallel_callable(
+                                ~~~~~~~~~~~~~~~~~^
+        fun, backend, axis_name, axis_size, global_axis_size, devices, name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        in_axes, out_axes_thunk, donated_invars,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        is_explicit_global_axis_size, *abstract_args)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/linear_util.py", line 349, in memoized_fun
+    ans = call(fun, *args)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/interpreters/pxla.py", line 627, in parallel_callable
+    closed_jaxpr, xc_backend, replicas, shards, pci = get_pmap_jaxpr(
+                                                      ~~~~~~~~~~~~~~^
+        fun, backend_name, axis_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        axis_size=axis_size, global_axis_size=global_axis_size,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        devices=devices, name=fun.__name__, in_axes=in_axes,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        out_axes_thunk=out_axes_thunk, avals=avals)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/interpreters/pxla.py", line 761, in get_pmap_jaxpr
+    jaxpr, consts, replicas, shards = stage_parallel_callable(pci, fun)
+                                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/interpreters/pxla.py", line 723, in stage_parallel_callable
+    jaxpr, out_sharded_avals, consts, _ = pe.trace_to_jaxpr_dynamic(
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        fun, sharded_avals, pe.tracing_debug_info_final(fun, "pmap"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/profiler.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/interpreters/partial_eval.py", line 2159, in trace_to_jaxpr_dynamic
+    ans = fun.call_wrapped(*in_tracers)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/linear_util.py", line 192, in call_wrapped
+    return self.f_transformed(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/interpreters/pxla.py", line 699, in _change_argument_ranks
+    results = f(*args)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/api_util.py", line 72, in flatten_fun
+    ans = f(*py_args, **py_kwargs)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/api_util.py", line 440, in _flat_out_axes
+    ans = _fun(*args, **kwargs)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/api_util.py", line 652, in result_paths
+    ans = _fun(*args, **kwargs)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jax/_src/api_util.py", line 292, in _argnums_partial
+    return _fun(*args, **kwargs)
+  File "/home/david/anaconda3/envs/jaxpi/lib/python3.13/site-packages/jaxpi/models.py", line 164, in update_weights
+    weights = self.compute_weights(state.params, batch, *args)
+                                   ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'params'

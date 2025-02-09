@@ -1,0 +1,10 @@
+{"time":"2025-02-08T19:38:40.158603946+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.5","symlink path":"/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/wandb/run-20250208_193839-ld9xhi4c/logs/debug-core.log"}
+{"time":"2025-02-08T19:38:40.285019579+08:00","level":"INFO","msg":"created new stream","id":"ld9xhi4c"}
+{"time":"2025-02-08T19:38:40.285052286+08:00","level":"INFO","msg":"stream: started","id":"ld9xhi4c"}
+{"time":"2025-02-08T19:38:40.285146711+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"ld9xhi4c"}
+{"time":"2025-02-08T19:38:40.285237914+08:00","level":"INFO","msg":"sender: started","stream_id":"ld9xhi4c"}
+{"time":"2025-02-08T19:38:40.285270493+08:00","level":"INFO","msg":"handler: started","stream_id":"ld9xhi4c"}
+{"time":"2025-02-08T19:38:40.614796844+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-08T19:47:18.668723961+08:00","level":"INFO","msg":"stream: closing","id":"ld9xhi4c"}
+{"time":"2025-02-08T19:47:18.668747142+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-08T19:47:18.669271338+08:00","level":"INFO","msg":"Stopped system monitor"}
