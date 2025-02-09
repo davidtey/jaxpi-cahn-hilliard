@@ -1,15 +1,15 @@
 {
   "os": "Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
   "python": "CPython 3.13.1",
-  "startedAt": "2025-02-02T09:39:07.627331Z",
-  "program": "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard/main.py",
-  "codePath": "examples/cahn_hilliard/main.py",
+  "startedAt": "2025-02-09T11:42:17.029226Z",
+  "program": "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard_extended/main.py",
+  "codePath": "examples/cahn_hilliard_extended/main.py",
   "git": {
-    "remote": "https://github.com/PredictiveIntelligenceLab/jaxpi.git",
-    "commit": "5d5ee8f5a6bed061cfd86f631bcb2a70dd20bb01"
+    "remote": "https://github.com/davidtey/jaxpi.git",
+    "commit": "79850e7b7d02cccd3a2ff475750838b22676b974"
   },
   "email": "davidteyby@gmail.com",
-  "root": "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard",
+  "root": "/home/david/work/repos/deep-learning-pde/jaxpi/examples/cahn_hilliard_extended",
   "host": "david",
   "executable": "/home/david/anaconda3/envs/jaxpi/bin/python",
   "codePathLocal": "main.py",
@@ -20,7 +20,7 @@
   "disk": {
     "/": {
       "total": "269427478528",
-      "used": "155336220672"
+      "used": "156817743872"
     }
   },
   "memory": {

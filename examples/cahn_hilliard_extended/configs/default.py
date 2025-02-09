@@ -8,7 +8,7 @@ def get_config():
     config = ml_collections.ConfigDict()
 
     # Train or eval
-    config.mode = "eval"
+    config.mode = "train"
 
     # Weights & Biases
     config.wandb = wandb = ml_collections.ConfigDict()

@@ -7,12 +7,11 @@ def get_config():
     """Get the default hyperparameter configuration."""
     config = ml_collections.ConfigDict()
 
-    # Train or eval
-    config.mode = "eval"
+    config.mode = "train"
 
     # Weights & Biases
     config.wandb = wandb = ml_collections.ConfigDict()
-    wandb.project = "PINN-CHE"
+    wandb.project = "PINN-CH"
     wandb.name = "default"
     wandb.tag = None
 
@@ -44,17 +43,13 @@ def get_config():
 
     config.training = training = ml_collections.ConfigDict()
     training.max_steps = 200000
-    training.res_batch_size = 4096
-    training.boundary_batch_size = 1
+    training.batch_size = 4096
     training.num_time_windows = 10
-    training.res_error_break = 1e-8
-    training.ics_error_break = 1e-8
 
     # Weighting
     config.weighting = weighting = ml_collections.ConfigDict()
     weighting.scheme = "grad_norm"
-    # weighting.init_weights = ml_collections.ConfigDict({"ics": 1.0, "res": 1.0, "bc": 1.0})
-    weighting.init_weights = ml_collections.ConfigDict({"ics": 1.0, "res": 1.0})
+    weighting.init_weights = ml_collections.ConfigDict({"ics": 1.0, "res": 1.0, "bc": 1.0})
     weighting.momentum = 0.9
     weighting.update_every_steps = 1000
 
@@ -64,7 +59,7 @@ def get_config():
 
     # Logging
     config.logging = logging = ml_collections.ConfigDict()
-    logging.log_every_steps = 250
+    logging.log_every_steps = 100
     logging.log_errors = True
     logging.log_losses = True
     logging.log_weights = True
@@ -74,8 +69,8 @@ def get_config():
 
     # Saving
     config.saving = saving = ml_collections.ConfigDict()
-    saving.save_every_steps = 100000
-    saving.num_keep_ckpts = 2
+    saving.save_every_steps = None
+    saving.num_keep_ckpts = 10
 
     # # Input shape for initializing Flax models
     config.input_dim = 2
