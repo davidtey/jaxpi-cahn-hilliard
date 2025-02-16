@@ -16,7 +16,7 @@ u0 = chebfun('0.2*(sin(10*pi*x))^3 - 0.8*sin(9*pi*x)', dom, 'trig');
 % u_t = 1e-2*(-u_xx - 1e-3*u_xxxx + (u^3)_xx - u)
 
 S = spinop(dom, tspan);
-S.lin = @(u) -0.1*diff(u, 2) - 0.0001*diff(u, 4) - 0.01*u;
+S.lin = @(u) -0.1*diff(u, 2) - 0.0001*diff(u, 4) - 0.1*u;
 S.nonlin = @(u) 0.1*diff(u.^3, 2);
 % S.nonlin = @(u) 0.75*u.^2.*diff(u,2) + 1.5*u.*diff(u,1).^2;
 S.init = u0;

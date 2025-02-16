@@ -39,8 +39,7 @@ class CHE(ForwardIVP):
         u_fn = lambda x: self.u_net(params, t, x)
         _, (u_x, u_xx, _, u_xxxx) = jet(u_fn, (x,), [[1.0, 0.0, 0.0, 0.0]])
         
-        res = u_t + 0.1*u_xx + 0.0001*u_xxxx + 0.01*u - 0.3*u**2*u_xx - 0.6*u*u_x**2  # cahn-hilliard extended equation
-        
+        res = u_t + 0.1*u_xx + 0.0001*u_xxxx + 0.1*u - 0.3*u**2*u_xx - 0.6*u*u_x**2  # cahn-hilliard extended equation
         
         bc = u_x
         
