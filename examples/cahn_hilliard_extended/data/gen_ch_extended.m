@@ -1,10 +1,10 @@
 %% Cahn-Hilliard Equation
 dt = 5e-4;
-steps = 500;
+steps = 1600;
 N = 511;
 xmin = -1;
 xmax = 1;
-tmax = 4;
+tmax = 1.6;
 
 p = 0.5;
 a = 10;
