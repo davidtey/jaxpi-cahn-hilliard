@@ -1,17 +1,17 @@
 %% Cahn-Hilliard Equation
 dt = 5e-4;
-steps = 1600;
+steps = 1000;
 N = 511;
 xmin = -1;
 xmax = 1;
-tmax = 1.6;
+tmax = 1;
 
 p = 0.5;
 a = 10;
 b = 9;
 
 dom = [xmin xmax];  tspan = linspace(0,tmax,steps+1);
-u0 = chebfun('0.2*(sin(10*pi*x))^3 - 0.8*sin(9*pi*x)', dom, 'trig');
+u0 = chebfun('0.7*(sin(7*pi*x)) - 0.3*sin(2*pi*x)', dom, 'trig');
 
 % u_t = 1e-2*(-u_xx - 1e-3*u_xxxx + (u^3)_xx - u)
 
