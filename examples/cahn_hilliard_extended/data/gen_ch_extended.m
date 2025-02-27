@@ -1,7 +1,7 @@
 %% Cahn-Hilliard Equation
 dt = 5e-4;
 steps = 2000;
-N = 511;
+N = 2047;
 xmin = -1;
 xmax = 1;
 tmax = 2;
