@@ -22,6 +22,8 @@ from utils import get_dataset
 def train_one_window(config, workdir, model, samplers, u_ref, idx):
     logger = Logger()
 
+    init_window_mul = 2 if idx == 0 else 1
+
     evaluator = models.CHEEvaluator(config, model)
 
     step_offset = idx * config.training.max_steps
@@ -29,7 +31,7 @@ def train_one_window(config, workdir, model, samplers, u_ref, idx):
     print("Waiting for JIT...")
     start_time = time.time()
     print(f"Device: {xla_bridge.get_backend().platform}")
-    for step in range(config.training.max_steps):
+    for step in range(config.training.max_steps*init_window_mul):
         # Sample mini-batch
         batch = {}
         # for key, sampler in samplers.items():

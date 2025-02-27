@@ -20,10 +20,13 @@ def evaluate(config: ml_collections.ConfigDict, workdir: str):
     u_ref, t_star, x_star = get_dataset()
 
     u_ref = u_ref[:-1, :]
+    u_ref = u_ref[:,:]
     u0 = u_ref[0, :]
 
     num_time_steps = len(t_star) // config.training.num_time_windows
     t = t_star[:num_time_steps]
+
+    t_star = t_star[:]
 
     # Initialize the model
     # Warning: t must be the same as the one used in training, otherwise the prediction will be wrong
@@ -31,13 +34,21 @@ def evaluate(config: ml_collections.ConfigDict, workdir: str):
     model = models.CHE(config, u0, t, x_star)
 
     u_pred_list = []
+    u_ref_adj_list = []
+    t_adj_list = []
+
     for idx in range(config.training.num_time_windows):
         # Get the reference solution for the current time window
         u = u_ref[num_time_steps * idx : num_time_steps * (idx + 1), :]
+        t_adj = t_star[num_time_steps  * idx : num_time_steps * (idx + 1)]
+        u_ref_adj_list.append(u)
+        t_adj_list.append(t_adj)
 
         # Restore the checkpoint
+        init_window_mul = 2 if idx == 0 else 1
+        final_cp_num = config.training.max_steps*init_window_mul
         ckpt_path = os.path.join(
-            workdir, config.wandb.name, "ckpt", f"time_window_{idx + 1}" #, f"checkpoint_{200000}"
+            workdir, config.wandb.name, "ckpt", f"time_window_{idx + 1}" #, f"checkpoint_{final_cp_num}"
         )
         model.state = restore_checkpoint(model.state, ckpt_path, None)
         params = model.state.params
@@ -51,15 +62,17 @@ def evaluate(config: ml_collections.ConfigDict, workdir: str):
 
     # Get the full prediction
     u_pred = jnp.concatenate(u_pred_list, axis=0)
-    l2_error = jnp.linalg.norm(u_pred - u_ref) / jnp.linalg.norm(u_ref)
+    u_ref_adj = jnp.concatenate(u_ref_adj_list, axis=0)
+    l2_error = jnp.linalg.norm(u_pred - u_ref_adj) / jnp.linalg.norm(u_ref_adj)
     logging.info("L2 error of the full prediction: {:.3e}".format(l2_error))
 
     # Plot the results
-    TT, XX = jnp.meshgrid(t_star[:-1], x_star, indexing="ij")  # Grid for plotting
+    t_star_adj = jnp.concatenate(t_adj_list, axis=0)
+    TT, XX = jnp.meshgrid(t_star_adj, x_star, indexing="ij")  # Grid for plotting
 
     fig = plt.figure(figsize=(18, 5))
     plt.subplot(1, 3, 1)
-    plt.pcolor(TT, XX, u_ref, cmap="jet")
+    plt.pcolor(TT, XX, u_ref_adj, cmap="jet")
     plt.colorbar()
     plt.xlabel("t")
     plt.ylabel("x")
@@ -75,7 +88,7 @@ def evaluate(config: ml_collections.ConfigDict, workdir: str):
     plt.tight_layout()
 
     plt.subplot(1, 3, 3)
-    plt.pcolor(TT, XX, jnp.abs(u_ref - u_pred), cmap="jet")
+    plt.pcolor(TT, XX, jnp.abs(u_ref_adj - u_pred), cmap="jet")
     plt.colorbar()
     plt.xlabel("t")
     plt.ylabel("x")
