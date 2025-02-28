@@ -97,7 +97,6 @@ class CHE(ForwardIVP):
         u_pred = vmap(self.u_net, (None, None, 0))(params, self.t0, self.x_star)
         ics_loss = jnp.mean((self.u0 - u_pred) ** 2)
         ics_loss = jnp.expand_dims(ics_loss, 0)
-        print(ics_loss.shape)
         
         return ics_loss
 
