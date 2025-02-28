@@ -18,12 +18,12 @@ from jaxpi.utils import save_checkpoint
 import models
 from utils import get_dataset
 
-def train_init_condition(config, workdir, model, samplers, u_ref, idx):
+def train_init_condition(config, workdir, model, samplers, u_ref):
     logger = Logger()
 
     evaluator = models.CHEEvaluator(config, model)
 
-    step_offset = idx * config.training.max_steps
+    step_offset = 0
 
     print("Waiting for JIT...")
     start_time = time.time()
@@ -70,7 +70,7 @@ def train_one_window(config, workdir, model, samplers, u_ref, idx):
 
     evaluator = models.CHEEvaluator(config, model)
 
-    step_offset = idx * config.training.max_steps
+    step_offset = (idx + 1) * config.training.max_steps
 
     print("Waiting for JIT...")
     start_time = time.time()
@@ -151,7 +151,7 @@ def train_and_evaluate(config: ml_collections.ConfigDict, workdir: str):
 
     # Init condition warmup
     model = models.CHE(config, u0, t, x_star)
-    model = train_init_condition(config, workdir, model, u_ref)
+    model = train_init_condition(config, workdir, model, samplers, u_ref)
     u0 = vmap(model.u_net, (None, None, 0))(model.state.params, t_star[num_time_steps], x_star)
 
     for idx in range(config.training.num_time_windows):
