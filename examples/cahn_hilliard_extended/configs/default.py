@@ -1,3 +1,5 @@
+
+###
 import ml_collections
 
 import jax.numpy as jnp
@@ -13,20 +15,20 @@ def get_config():
     # Weights & Biases
     config.wandb = wandb = ml_collections.ConfigDict()
     wandb.project = "PINN-CHE"
-    wandb.name = "default"
+    wandb.name = "high_freq_2048_icsw"
     wandb.tag = None
 
     # Arch
     config.arch = arch = ml_collections.ConfigDict()
     arch.arch_name = "ModifiedMlp"
     arch.num_layers = 5
-    arch.hidden_dim = 256
+    arch.hidden_dim = 512
     arch.out_dim = 1
     arch.activation = "tanh"
     arch.periodicity = ml_collections.ConfigDict(
         {"period": (jnp.pi,), "axis": (1,), "trainable": (False,)}
     )
-    arch.fourier_emb = ml_collections.ConfigDict({"embed_scale": 1, "embed_dim": 256})
+    arch.fourier_emb = ml_collections.ConfigDict({"embed_scale": 1, "embed_dim": 512})
     arch.reparam = ml_collections.ConfigDict(
         {"type": "weight_fact", "mean": 0.5, "stddev": 0.1}
     )
@@ -49,8 +51,8 @@ def get_config():
     training.res_batch_size = 4096
     training.boundary_batch_size = 1
     training.num_time_windows = 10
-    training.res_error_break = 1e-8
-    training.ics_error_break = 1e-8
+    training.res_error_break = 1.5e-8
+    training.ics_error_break = 1.5e-8
 
     training.ics_warmup_max_steps = 200000
     training.ics_warmup_error_break = 1e-10
