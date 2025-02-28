@@ -18,24 +18,33 @@ from jaxpi.utils import save_checkpoint
 import models
 from utils import get_dataset
 
-def train_init_condition(config, workdir, model, u_ref):
+def train_init_condition(config, workdir, model, samplers, u_ref, idx):
     logger = Logger()
 
     evaluator = models.CHEEvaluator(config, model)
+
+    step_offset = idx * config.training.max_steps
 
     print("Waiting for JIT...")
     start_time = time.time()
     print(f"Device: {xla_bridge.get_backend().platform}")
 
-    print(f"Training neural network approximation of initial condition...")
+    print("Training initial condition...")
 
     for step in range(config.training.ics_warmup_max_steps):
-        # train on the initial condition
-        print(model.ics_warmup_loss(model.state.params))
+        # Sample mini-batch
+        batch = {}
+        # for key, sampler in samplers.items():
+        #     batch[key] = next(sampler)
+            
+        batch['res'] = next(samplers['res'])
+            
+        model.state = model.step(model.state, batch)
 
-        grads = grad(model.ics_warmup_loss)(model.state.params)
-        grads = lax.pmean(grads, "batch")
-        model.state = model.state.apply_gradients(grads=grads)
+        # Update weights if necessary
+        if config.weighting.scheme in ["grad_norm", "ntk"]:
+            if step % config.weighting.update_every_steps == 0:
+                model.state = model.update_weights(model.state, batch)
 
         # Log training metrics, only use host 0 to record results
         if jax.process_index() == 0:
@@ -44,7 +53,7 @@ def train_init_condition(config, workdir, model, u_ref):
                 state = jax.device_get(tree_map(lambda x: x[0], model.state))
                 batch = jax.device_get(tree_map(lambda x: x[0], batch))
                 log_dict = evaluator(state, batch, u_ref)
-                wandb.log(log_dict, step)
+                wandb.log(log_dict, step + step_offset)
 
                 end_time = time.time()
                 logger.log_iter(step, start_time, end_time, log_dict)
@@ -52,6 +61,8 @@ def train_init_condition(config, workdir, model, u_ref):
                 
                 if log_dict['ics_loss'] < config.training.ics_warmup_error_break:
                     break
+
+    return model
 
 
 def train_one_window(config, workdir, model, samplers, u_ref, idx):
