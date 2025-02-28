@@ -3,7 +3,7 @@ import time
 
 import jax
 import jax.numpy as jnp
-from jax import vmap
+from jax import vmap, lax, grad
 from jax.tree_util import tree_map
 from jax.lib import xla_bridge
 
@@ -18,11 +18,42 @@ from jaxpi.utils import save_checkpoint
 import models
 from utils import get_dataset
 
+def train_init_condition(config, workdir, model, u_ref):
+    logger = Logger()
+
+    evaluator = models.CHEEvaluator(config, model)
+
+    print("Waiting for JIT...")
+    start_time = time.time()
+    print(f"Device: {xla_bridge.get_backend().platform}")
+
+    print(f"Training neural network approximation of initial condition...")
+
+    for step in range(config.training.ics_warmup_max_steps):
+        # train on the initial condition
+        grads = grad(model.ics_warmup_loss)(state.params, state.weights, batch)
+        grads = lax.pmean(grads, "batch")
+        model.state = model.state.apply_gradients(grads=grads)
+
+        # Log training metrics, only use host 0 to record results
+        if jax.process_index() == 0:
+            if step % config.logging.log_every_steps == 0:
+                # Get the first replica of the state and batch
+                state = jax.device_get(tree_map(lambda x: x[0], model.state))
+                batch = jax.device_get(tree_map(lambda x: x[0], batch))
+                log_dict = evaluator(state, batch, u_ref)
+                wandb.log(log_dict, step)
+
+                end_time = time.time()
+                logger.log_iter(step, start_time, end_time, log_dict)
+                start_time = end_time
+                
+                if log_dict['ics_loss'] < config.training.ics_warmup_error_break:
+                    break
+
 
 def train_one_window(config, workdir, model, samplers, u_ref, idx):
     logger = Logger()
-
-    init_window_mul = 2 if idx == 0 else 1
 
     evaluator = models.CHEEvaluator(config, model)
 
@@ -31,7 +62,7 @@ def train_one_window(config, workdir, model, samplers, u_ref, idx):
     print("Waiting for JIT...")
     start_time = time.time()
     print(f"Device: {xla_bridge.get_backend().platform}")
-    for step in range(config.training.max_steps*init_window_mul):
+    for step in range(config.training.max_steps):
         # Sample mini-batch
         batch = {}
         # for key, sampler in samplers.items():
@@ -105,13 +136,19 @@ def train_and_evaluate(config: ml_collections.ConfigDict, workdir: str):
     samplers['res'] = res_sampler
     # samplers['bc'] = bc_sampler
 
+    # Init condition warmup
+    model = models.CHE(config, u0, t, x_star)
+    model = train_init_condition(config, workdir, model)
+    u0 = vmap(model.u_net, (None, None, 0))(model.state.params, t_star[num_time_steps], x_star)
+
     for idx in range(config.training.num_time_windows):
         print("Training time window {}".format(idx + 1))
         # Get the reference solution for the current time window
         u = u_ref[num_time_steps * idx : num_time_steps * (idx + 1), :]
 
         # Initialize the model
-        model = models.CHE(config, u0, t, x_star)
+        if idx > 0:
+            model = models.CHE(config, u0, t, x_star)
 
         # Training the current time window
         model = train_one_window(config, workdir, model, samplers, u, idx)

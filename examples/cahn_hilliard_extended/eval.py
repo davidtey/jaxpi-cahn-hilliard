@@ -45,10 +45,8 @@ def evaluate(config: ml_collections.ConfigDict, workdir: str):
         t_adj_list.append(t_adj)
 
         # Restore the checkpoint
-        init_window_mul = 2 if idx == 0 else 1
-        final_cp_num = config.training.max_steps*init_window_mul
         ckpt_path = os.path.join(
-            workdir, config.wandb.name, "ckpt", f"time_window_{idx + 1}" #, f"checkpoint_{final_cp_num}"
+            workdir, config.wandb.name, "ckpt", f"time_window_{idx + 1}" #, f"checkpoint_{config.training.max_steps}"
         )
         model.state = restore_checkpoint(model.state, ckpt_path, None)
         params = model.state.params

@@ -44,11 +44,16 @@ def get_config():
 
     config.training = training = ml_collections.ConfigDict()
     training.max_steps = 200000
+    # training.ics_batch_size = 2048 # to do
+    # training.ics_random = False
     training.res_batch_size = 4096
     training.boundary_batch_size = 1
     training.num_time_windows = 10
     training.res_error_break = 1e-8
     training.ics_error_break = 1e-8
+
+    training.ics_warmup_max_steps = 200000
+    training.ics_warmup_error_break = 1e-10
 
     # Weighting
     config.weighting = weighting = ml_collections.ConfigDict()

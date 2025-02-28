@@ -91,6 +91,13 @@ class CHE(ForwardIVP):
         loss_dict = {"ics": ics_loss, "res": res_loss}
         
         return loss_dict
+    
+    @partial(jit, static_argnums=(0,))
+    def ics_warmup_loss(self, params, batch):
+        u_pred = vmap(self.u_net, (None, None, 0))(params, self.t0, self.x_star)
+        ics_loss = jnp.mean((self.u0 - u_pred) ** 2)
+        
+        return ics_loss
 
     @partial(jit, static_argnums=(0,))
     def compute_diag_ntk(self, params, batch):
