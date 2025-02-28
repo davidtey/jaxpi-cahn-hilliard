@@ -70,7 +70,7 @@ def train_one_window(config, workdir, model, samplers, u_ref, idx):
 
     evaluator = models.CHEEvaluator(config, model)
 
-    step_offset = (idx + 1) * config.training.max_steps
+    step_offset = idx * config.training.max_steps + config.training.ics_warmup_max_steps
 
     print("Waiting for JIT...")
     start_time = time.time()
