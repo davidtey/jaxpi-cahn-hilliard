@@ -31,7 +31,7 @@ def train_init_condition(config, workdir, model, u_ref):
 
     for step in range(config.training.ics_warmup_max_steps):
         # train on the initial condition
-        grads = grad(model.ics_warmup_loss)(model.state.params, model.state.weights, batch)
+        grads = grad(model.ics_warmup_loss)(model.state.params, model.state.weights)
         grads = lax.pmean(grads, "batch")
         model.state = model.state.apply_gradients(grads=grads)
 
