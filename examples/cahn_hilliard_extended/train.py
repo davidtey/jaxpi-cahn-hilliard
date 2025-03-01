@@ -155,6 +155,7 @@ def train_and_evaluate(config: ml_collections.ConfigDict, workdir: str):
     model = train_init_condition(config, workdir, model, samplers, u)
     state = jax.device_get(jax.tree_util.tree_map(lambda x: x[0], model.state))
     u0 = vmap(model.u_net, (None, None, 0))(state.params, t0, x_star)
+    model.u0 = u0
 
     for idx in range(config.training.num_time_windows):
         print("Training time window {}".format(idx + 1))
