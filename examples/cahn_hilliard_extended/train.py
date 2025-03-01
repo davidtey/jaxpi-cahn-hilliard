@@ -153,7 +153,8 @@ def train_and_evaluate(config: ml_collections.ConfigDict, workdir: str):
     model = models.CHE(config, u0, t, x_star)
     u = u_ref[0:num_time_steps, :]
     model = train_init_condition(config, workdir, model, samplers, u)
-    u0 = vmap(model.u_net, (None, None, 0))(model.state.params, t_star[num_time_steps], x_star)
+    state = jax.device_get(jax.tree_util.tree_map(lambda x: x[0], model.state))
+    u0 = vmap(model.u_net, (None, None, 0))(state.params, t0, x_star)
 
     for idx in range(config.training.num_time_windows):
         print("Training time window {}".format(idx + 1))
